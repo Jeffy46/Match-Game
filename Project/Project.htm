@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "script.js"></script>
+        <link rel = "stylesheet" href = "styles.css"/>
+    </head>
+    <body onload = "initialize();">
+        <div class = "container">
+            <h1 id="title">Match Game </h1>
+            <div class="grid-container">
+                <img onclick="clicked(0);" class="grid-img" id="item-0" src="images/question_mark.jpg" />
+                <img onclick="clicked(1);" class="grid-img" id="item-1" src="images/question_mark.jpg" />
+                <img onclick="clicked(2);" class="grid-img" id="item-2" src="images/question_mark.jpg" />
+                <img onclick="clicked(3);" class="grid-img" id="item-3" src="images/question_mark.jpg" />
+                <img onclick="clicked(4);" class="grid-img" id="item-4" src="images/question_mark.jpg" />
+                <img onclick="clicked(5);" class="grid-img" id="item-5" src="images/question_mark.jpg" />
+                <img onclick="clicked(6);" class="grid-img" id="item-6" src="images/question_mark.jpg" />
+                <img onclick="clicked(7);" class="grid-img" id="item-7" src="images/question_mark.jpg" />
+                <img onclick="clicked(8);" class="grid-img" id="item-8" src="images/question_mark.jpg" />
+                <img onclick="clicked(9);" class="grid-img" id="item-9" src="images/question_mark.jpg" />
+                <img onclick="clicked(10);" class="grid-img" id="item-10" src="images/question_mark.jpg" />
+                <img onclick="clicked(11);" class="grid-img" id="item-11" src="images/question_mark.jpg" />
+                <img onclick="clicked(12);" class="grid-img" id="item-12" src="images/question_mark.jpg" />
+                <img onclick="clicked(13);" class="grid-img" id="item-13" src="images/question_mark.jpg" />
+                <img onclick="clicked(14);" class="grid-img" id="item-14" src="images/question_mark.jpg" />
+                <img onclick="clicked(15);" class="grid-img" id="item-15" src="images/question_mark.jpg" />
+            </div>
+            <div class = "bottom">
+                <span style = "margin-right:20px; margin-top:40px;"id = "userScore" >Score: 0</span>
+                <button style = "margin-right:20px; margin-top:40px;" onclick = "resetGame()">Reset</button>
+                <a style = "margin-right:20px; margin-top:40px;" href = "instructions.htm">How To Play</a>
+            </div>
+        </div>
+    </body>
+</html>
