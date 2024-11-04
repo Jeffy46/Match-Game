@@ -9,10 +9,17 @@ let initialize=()=>{
     showedScore = document.getElementById('userScore');
     assign();
 }
+let assign=()=>{
+    tempArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    for(let i=0; i < 16;i++){
+        let temp= Math.floor(Math.random()*tempArray.length);
+        imgArray.push(storageArray[tempArray[temp]]);
+        tempArray.splice(temp,1)
+    }
+}
 let clicked=(a)=>{
     score++;
     console.log(a);
-    //first click
     if(tracker%2===1){
         tempArray.push(a);
         const image = document.getElementById(`item-${a}`);
@@ -36,24 +43,17 @@ let clicked=(a)=>{
     tracker++;
     update();
 }
-let update = () => showedScore.innerHTML = `Score: ${score}`;
-//assigns random positions for images
-let assign=()=>{
-    tempArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-    for(let i=0; i < 16;i++){
-        let temp= Math.floor(Math.random()*tempArray.length);
-        imgArray.push(storageArray[tempArray[temp]]);
-        tempArray.splice(temp,1)
-    }
-}
 let match =()=>{
     return (imgArray[tempArray[0]] === imgArray[tempArray[1]]) ? true : false;
 }
+let update = () => showedScore.innerHTML = `Score: ${score}`;
+
+
 let resetGame=()=>{
     score = 0;
     tracker = 1;
     tempArray = [];
-    imgArray = []
+    imgArray = [];
     assign();
     storageArray = ["images/cat.png","images/pigeon.png","images/cheetah.png","images/turtle.png","images/dog.png","images/fish.png","images/whale.png","images/eagle.png","images/cat.png","images/pigeon.png","images/cheetah.png","images/turtle.png","images/dog.png","images/fish.png","images/whale.png","images/eagle.png"];
     update();
